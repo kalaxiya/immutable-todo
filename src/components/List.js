@@ -1,3 +1,5 @@
+'use strict';
+
 var React = require('react');
 var Immutable = require('immutable');
 var shallowCompare = require('../_util/shallowCompare');

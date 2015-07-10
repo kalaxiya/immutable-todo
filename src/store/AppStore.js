@@ -1,3 +1,5 @@
+'use strict';
+
 var Immutable = require('immutable');
 var Cursor = require('immutable/contrib/cursor');
 var EventEmitter = require('events').EventEmitter;
@@ -51,6 +53,11 @@ function updateInput(text) {
 }
 
 function add(id, text) {
+    /**
+     * `cursor`的每次修改操作都会触发`onChange`回调
+     * 所以将一次以上的操作都放进一个`update`里,
+     * 这样只触发一次`onChange`
+     */
     AppStore.cursor().update(function(data){
         return data.set('inputValue', '').updateIn(['todo', id], function(){
             return new Item({

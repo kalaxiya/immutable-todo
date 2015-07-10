@@ -1,3 +1,5 @@
+'use strict';
+
 var React = require('react');
 var AppAction = require('../action/AppActions');
 var shallowCompare = require('../_util/shallowCompare');
