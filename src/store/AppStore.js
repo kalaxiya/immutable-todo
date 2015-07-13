@@ -36,6 +36,7 @@ var AppStore = assign({}, EventEmitter.prototype, {
         return data;
     },
 
+    //获取最新数据的cursor
     cursor: function() {
         return Cursor.from(data, function(newData){
 
