@@ -6,6 +6,7 @@ var shallowCompare = require('../_util/shallowCompare');
 var AppAction = require('../action/AppActions');
 
 class List extends React.Component {
+    //得用不可变数据,提高比较的效率
     shouldComponentUpdate(nextProps, nextState) {
         return shallowCompare(this, nextProps, nextState);
     }
