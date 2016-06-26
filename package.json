@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "immutable-todo-demo",
   "version": "0.0.1",
   "dependencies": {
     "events": "^1.0.2",
