@@ -1,9 +1,7 @@
-'use strict';
-
-var React = require('react');
-var Immutable = require('immutable');
-var shallowCompare = require('../_util/shallowCompare');
-var AppAction = require('../action/AppActions');
+import React from "react"
+import Immutable from "immutable"
+import shallowCompare from "../_util/shallowCompare"
+import AppAction from "../action/AppActions"
 
 class List extends React.Component {
     //得用不可变数据,提高比较的效率
