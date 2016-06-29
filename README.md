@@ -1,10 +1,10 @@
 # immutable-todo
-a tiny todo demo with immutable.js and flux.
+a tiny demo with immutable.js.
 
     npm install
-    
+
 then run:
 
-    webpack
-    
-to build the bundle and run `index.html`.
+    npm start
+
+open `http://localhost:3000/`

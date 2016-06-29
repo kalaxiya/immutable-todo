@@ -1,5 +1,8 @@
 module.exports = {
-    entry: './src/entry.js',
+    entry: [
+        'babel-polyfill',
+        './src/entry.js'
+    ],
     output: {
         path: __dirname + '/build',
         filename: 'bundle.js'
@@ -11,8 +14,9 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loaders: ['jsx-loader?harmony']
+                exclude: /node_modules/,
+                loader: 'babel'
             }
         ]
     }
-};
+}
